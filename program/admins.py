@@ -99,7 +99,7 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("✅ **streaming has ended.**")
+            await m.reply("✅ **LAGUNYA ATAU VIDEONYA UDAH MATI GBLK**")
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
@@ -134,7 +134,7 @@ async def resume(client, m: Message):
         try:
             await call_py.resume_stream(chat_id)
             await m.reply(
-                "▶️ **Track resumed.**\n\n• **To pause the stream, use the**\n» /pause command."
+                "▶️ **TERPAUSE.**\n\n• **To pause the stream, use the**\n» /pause command."
             )
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
@@ -210,7 +210,7 @@ async def cbresume(_, query: CallbackQuery):
         try:
             await call_py.resume_stream(chat_id)
             await query.edit_message_text(
-                "▶️ the streaming has resumed", reply_markup=bttn
+                "▶️ LAGU ATAU VIDEONYA UDAH DI LANJUTKAN", reply_markup=bttn
             )
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
@@ -230,7 +230,7 @@ async def cbstop(_, query: CallbackQuery):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await query.edit_message_text("✅ **this streaming has ended**", reply_markup=bcl)
+            await query.edit_message_text("✅ **LAGU ATAU VIDEONYA UDAH DI LANJUTKAN**", reply_markup=bcl)
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:

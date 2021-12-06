@@ -59,16 +59,16 @@ async def cbguides(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""❓ **Basic Guide for using this bot:**
 
-1.) **First, add me to your group.**
-2.) **Then, promote me as administrator and give all permissions except Anonymous Admin.**
-3.) **After promoting me, type /reload in group to refresh the admin data.**
-3.) **Add @{ASSISTANT_NAME} to your group or type /userbotjoin to invite her.**
-4.) **Turn on the video chat first before start to play video/music.**
-5.) **Sometimes, reloading the bot by using /reload command can help you to fix some problem.**
+1.) **Pertama, tambahkan saya ke grup Anda**
+2.) **kemudian adminin saya**
+3.) **setelah itu ketik /reload untuk memperbarui admin.**
+3.) **tambahkan @{ASSISTANT_NAME} di group anda.**
+4.) **Nyalakan obrolan video terlebih dahulu sebelum mulai memutar video/musik.**
+5.) **Terkadang, memuat ulang bot dengan menggunakan perintah /reload dapat membantu Anda memperbaiki beberapa masalah.**
 
-📌 **If the userbot not joined to video chat, make sure if the video chat already turned on, or type /userbotleave then type /userbotjoin again.**
+📌 **Jika userbot tidak bergabung ke video chat, pastikan jika video chat sudah aktif, atau ketik /userbotleave lalu ketik /userbotjoin lagi.**
 
-💡 **If you have a follow-up questions about this bot, you can tell it on my support chat here: @{GROUP_SUPPORT}**
+💡 **Jika Anda memiliki pertanyaan lanjutan tentang bot ini, Anda dapat menceritakannya di obrolan dukungan saya di sini: @{GROUP_SUPPORT}**
 
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(

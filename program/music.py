@@ -186,7 +186,7 @@ async def play(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=f"{IMG_1}",
-                                caption=f"💡 **antrian udah di tambahkan yah tof »** `{pos}`\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}",
+                                caption=f"💡 **antrian udah di tambahkan yah tod »** `{pos}`\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}",
                                 reply_markup=keyboard,
                             )
                         else:
@@ -217,8 +217,7 @@ async def play(c: Client, m: Message):
                 "» reply to an **audio file** or **give something to search.**"
             )
         else:
-            suhu = await c.send_message(chat_id, "🔎 **tunggu bentar yah**")
-            query = m.text.split(None, 1)[1]
+            suhu = await c.send_message(chat_id, "🔎 **tunggu bentar TOD**")
             search = ytsearch(query)
             if search == 0:
                 await suhu.edit("❌ **no results found.**")
@@ -237,12 +236,12 @@ async def play(c: Client, m: Message):
                         )
                         await m.reply_photo(
                             photo=f"{IMG_1}",
-                            caption=f"💡 **Track added to queue »** `{pos}`\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}",
+                            caption=f"💡 **UDAH GUA TAMBAHIN DI ANTRIAN KE »** `{pos}`\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}",
                             reply_markup=keyboard,
                         )
                     else:
                         try:
-                            await suhu.edit("🔄 **Joining vc...**")
+                            await suhu.edit("🔄 **BERGABUNG DI OS**")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioPiped(
@@ -336,7 +335,7 @@ async def stream(c: Client, m: Message):
         await m.reply("» give me a live-link/m3u8 url/youtube link to stream.")
     else:
         link = m.text.split(None, 1)[1]
-        suhu = await c.send_message(chat_id, "🔄 **processing stream...**")
+        suhu = await c.send_message(chat_id, "🔄 **BERGABUNG STREAM.**")
 
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
@@ -360,7 +359,7 @@ async def stream(c: Client, m: Message):
                 )
             else:
                 try:
-                    await suhu.edit("🔄 **Joining vc...**")
+                    await suhu.edit("🔄 **BERGABUNG DI OS**")
                     await call_py.join_group_call(
                         chat_id,
                         AudioPiped(
